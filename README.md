@@ -4,11 +4,11 @@
 * Windows 10 Professional version 1909 or greater (As a  workaround. if you are using 1709, make sure your git repository is cloned into C:/users/your-user-name/btap_batch) Performance however will not be optimal and will not use all available ram. 
 * [Docker](https://docs.docker.com/docker-for-windows/install/) running on your computer and your user added to the docker premissions group.
 * Grant Docker access to your C: drive in it's interface.  
-A git [client](https://git-scm.com/downloads)
+* A git [client](https://git-scm.com/downloads)
 * A high speed internet connection 50MBit/s download or better, ideally 150Mbit/s.
 * A github account and [git-token](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token)
 * Add the github token as a user windows/linux environment variable as GIT_API_TOKEN
-* Permissions to access canmet-energy repositories from phylroy.lopez@canada.ca (For use of the restricted costing features.)
+* Permissions to access canmet-energy repositories from phylroy.lopez@canada.ca (For use of the restricted costing features only.)
 * [Sketchup 2020](https://www.sketchup.com/sketchup/2020/SketchUpPro-exe) (optional) To create custom geometry models.
 * [OpenStudio App 1.0.1](https://github.com/openstudiocoalition/OpenStudioApplication/releases/tag/v1.0.1) (optional) 
 
@@ -66,9 +66,8 @@ largescale analysis, please contact us for more information.
 BTAP_CLI operated in two modes, with equipment and materials costing information and without.
 
 ### Capital Cost Mode
- With costing 
-information, btap uses and expert based system to determine the relative costs of the energy upgrades available 
-in BTAP. To use this you will need to contact us for access as it is experimental. 
+With costing information, btap uses and expert based system to determine the relative costs of the energy upgrades available 
+in BTAP. To use this you will need to contact us for access as it is experimental. Partners would require an RSMean licence.
 
 ### Regular Mode
 This will allow you to run simulations with the ECMs however it will not provide any costing other than 
