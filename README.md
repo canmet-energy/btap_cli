@@ -33,7 +33,7 @@ Note: Work is underway under the General Infrastructure PERD project to add olde
 
 ### Commercial Building Geometries
 BTAP comes with the standard geometries built-in commercial building spacetype geometric models. The are based on the U.S. DOE reference building archetypes, but gutted of everything except the geometry and space type information. You can find a list of the buildings [here](./docs/BtapBuildingGeometryLibrary.md)
-You can also create your own buildings using the OpenStudio Sketchup Plug-in included in the OpenStudio Installation. Other tools support conversion to an openstudio model including Revit, and eQuest. To use a custom osm file as input simply.
+You can also create your own buildings using the OpenStudio Sketchup Plug-in included in the OpenStudio Installation. Other tools support conversion to an openstudio model including Revit, and eQuest. See how to Custom OSM section below. 
 
 
  
