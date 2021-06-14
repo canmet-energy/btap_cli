@@ -77,7 +77,15 @@ utility costs based on the NEB rates. It also provided NECB defaults for whichev
 ### Clone this repository
 You will first need to build the image that the cli will use. You will need to clone this repository to your
 system, if you are on windows, I would recommend cloning it in your windows user folder. For example my windows
-user folder is c:\Users\plopez.  
+user folder is c:\Users\plopez. Do not use this path, this is an example..use your account folder. 
+
+Clone this repository to your computer and change into the project folder using windows powershell.
+```
+cd c:\users\plopez
+git clone https://github.com/canmet-energy/btap_cli
+cd btap_cli
+```
+
 
 ### Build Image
 You will need to issue one of the following commands from windows powershell in the btap_cli folder.
