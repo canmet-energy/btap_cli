@@ -16,7 +16,7 @@
 BTAP is a research tool used internally by CanmetENERGY. It undergoes constant changes and may alter workflows and 
 outputs without notice. If you wish to work with us in a more formal way, please contact us to create a work arrangement
 where you will be notified of change and updates ahead of deployment. You will also be able to provide feedback on 
-requests for new features and collaborate on research oppertuinities. 
+requests for new features and collaborate on research opportunities. 
 
 ## Background
 BTAP is the Building Technology Assesement Platform developed by Natural Resources Canada's research arm CanmetENERGY. It is developed upon the OpenStudio/EnergyPlus open-source framework created by the US DOE and the US National Renewable Energy Laboratory. 
