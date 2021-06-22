@@ -97,7 +97,7 @@ You will need to issue one of the following commands from windows powershell in 
 
 Option 1: Non-Costed.
 ```
-docker build -t btap_cli  --build-arg GIT_API_TOKEN=$env:GIT_API_TOKEN.
+docker build -t btap_cli  --build-arg GIT_API_TOKEN=$env:GIT_API_TOKEN .
 ```
 Option 2: Costed (note if you issue this without permissions from NRCan this will fail.) 
 ```
