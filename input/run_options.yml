@@ -5,6 +5,7 @@
 :building_type: custom
 :epw_file: CAN_QC_Montreal-Trudeau.Intl.AP.716270_CWEC2016.epw
 :primary_heating_fuel: Electricity
+:run_annual_simulation: true
 # Building Characteristics
 :adv_dx_units: NECB_Default # Options are [ 'NECB_Default','Carrier WeatherExpert']
 :boiler_eff: NECB_Default   # Options are [ 'NECB_Default', 'NECB 88% Efficient Condensing Boiler','Viessmann Vitocrossal 300 CT3-17 96.2% Efficient Condensing Gas Boiler']
