@@ -1,53 +1,52 @@
 # Run Configuration
 :datapoint_id: 11111111-1111-1111-1111-111111111111
 :enable_costing: true
-:template: NECB2017
-:building_type: custom
-:epw_file: CAN_QC_Montreal-Trudeau.Intl.AP.716270_CWEC2016.epw
-:primary_heating_fuel: Electricity
 :run_annual_simulation: true
-# Building Characteristics
-:adv_dx_units: NECB_Default # Options are [ 'NECB_Default','Carrier WeatherExpert']
-:boiler_eff: NECB_Default   # Options are [ 'NECB_Default', 'NECB 88% Efficient Condensing Boiler','Viessmann Vitocrossal 300 CT3-17 96.2% Efficient Condensing Gas Boiler']
-:chiller_type: NECB_Default # Options are  [ 'NECB_Default', 'VSD']
-:daylighting_type: NECB_Default # Options are [ 'NECB_Default', 'add_daylighting_controls']
-:dcv_type: NECB_Default # Options are [ 'NECB_Default', 'No_DCV', 'Occupancy_based_DCV', 'CO2_based_DCV']
-:door_construction_cond: NECB_Default #  [ 'NECB_Default','2.4', '2.2','1.6']
-:ecm_system_name: NECB_Default # Options are  ['NECB_Default','HS09_CCASHPSys', 'HS08_VRFZonal']
-:electrical_loads_scale: NECB_Default
-:erv_package: NECB_Default # ['NECB_Default_All', 'Plate-All', 'Plate-Existing', 'Rotary-All', 'Rotary-Existing']
-:ext_floor_cond: NECB_Default # ['NECB_Default','0.227','0.183', '0.162','0.142']
-:ext_roof_cond: NECB_Default # ['NECB_Default', '0.227', '0.193', '0.183', '0.162', '0.142', '0.138', '0.121']
-:ext_wall_cond: NECB_Default # ['NECB_Default','0.314','0.278','0.247','0.210','0.183']
-:fdwr_set: NECB_Default #[0.1, 0.2, 0.3, 0.5, 0.6, 0.7, 0.8, 0.9]
-:fixed_wind_solar_trans: NECB_Default # ['NECB_Default','0.2','0.3','0.4','0.5','0.6']
-:fixed_window_cond: NECB_Default # [ 'NECB_Default', '2.4', '2.2', '1.6' ]
-:furnace_eff: NECB_Default # ['NECB_Default','NECB 85% Efficient Condensing Gas Furnace']
-:glass_door_cond: NECB_Default # Locked for now.
-:glass_door_solar_trans: NECB_Default # ['NECB_Default','0.0','0.1','0.3','0.5','0.7','0.9']
-:ground_floor_cond: NECB_Default # ['NECB_Default', '0.758','0.379']
-:ground_roof_cond: NECB_Default # ['NECB_Default','0.568','0.379' ,'0.284','0.210']
-:ground_wall_cond: NECB_Default # ['NECB_Default','0.568','0.379','0.284','0.210']
-:infiltration_scale: NECB_Default # ['NECB_Default', '0.0', '0.1','0.3', '0.5']
-:lights_scale: NECB_Default # ['NECB_Default','0.0','0.1','0.3','0.5','0.7','0.9']
-:lights_type: NECB_Default # ['NECB_Default','LED'] Note: NECB Default are CFL.
-:nv_delta_temp_in_out: NECB_Default
-:nv_temp_out_min: NECB_Default
-:nv_opening_fraction: NECB_Default
-:nv_type: NECB_Default # ['NECB_Default','add_nv']
-:oa_scale: NECB_Default # ['NECB_Default','0.0','0.1','0.3','0.5','0.7','0.9']
-:occupancy_loads_scale: NECB_Default # ['NECB_Default','0.0','0.1','0.3','0.5','0.7','0.9']
-:overhead_door_cond: NECB_Default
-:pv_ground_azimuth_angle: NECB_Default
-:pv_ground_module_description: NECB_Default
-:pv_ground_tilt_angle: NECB_Default
-:pv_ground_total_area_pv_panels_m2: NECB_Default
-:pv_ground_type: NECB_Default # [ 'NECB_Default', 'add_pv_ground' ]
-:rotation_degrees: NECB_Default # [ 'NECB_Default', '90.0', '180.0', '270.0']
-:scale_x: NECB_Default # ['NECB_Default','0.0','0.1','0.3','0.5','0.7','0.9']
-:scale_y: NECB_Default # ['NECB_Default','0.0','0.1','0.3','0.5','0.7','0.9']
-:scale_z: NECB_Default
-:shw_eff: NECB_Default
-:skylight_cond: NECB_Default
-:skylight_solar_trans: NECB_Default
-:srr_set: NECB_Default #[ 'NECB_Default', 0.0]
+:building_type: 'custom' # ["SecondarySchool","PrimarySchool","SmallOffice","MediumOffice","LargeOffice","SmallHotel","LargeHotel","Warehouse","RetailStandalone","RetailStripmall","QuickServiceRestaurant","FullServiceRestaurant","MidriseApartment","HighriseApartment","LowriseApartment","Hospital","Outpatient"]
+:template: 'NECB2017' # [ "BTAPPRE1980", "BTAP1980TO2010", "NECB2011", "NECB2015","NECB2017"]
+:epw_file: 'CAN_QC_Montreal-Trudeau.Intl.AP.716270_CWEC2016.epw' # ['CAN_QC_Montreal-Trudeau.Intl.AP.716270_CWEC2016.epw','CAN_NS_Halifax.Dockyard.713280_CWEC2016.epw','CAN_AB_Edmonton.Intl.AP.711230_CWEC2016.epw','CAN_BC_Vancouver.Intl.AP.718920_CWEC2016.epw','CAN_AB_Calgary.Intl.AP.718770_CWEC2016.epw','CAN_ON_Toronto.Pearson.Intl.AP.716240_CWEC2016.epw','CAN_YT_Whitehorse.Intl.AP.719640_CWEC2016.epw']
+:primary_heating_fuel: "Electricity" # [ "Electricity", "NaturalGas","FuelOilNo2"]
+:dcv_type: 'NECB_Default' #['NECB_Default','No_DCV','Occupancy_based_DCV','CO2_based_DCV']
+:lights_type: 'NECB_Default' # [ 'NECB_Default','LED']
+:lights_scale: 'NECB_Default'# [ 'NECB_Default','0.5','0.01']
+:daylighting_type: 'NECB_Default' #[ 'NECB_Default','add_daylighting_controls']
+:ecm_system_name: 'NECB_Default' #[ 'NECB_Default', 'HS09_CCASHPSys', 'HS08_VRFZonal']
+:erv_package: 'NECB_Default' # [ 'NECB_Default',"NECB_Default_All","Plate-All","Plate-Existing","Rotary-All","Rotary-Existing"]
+:boiler_eff: 'NECB_Default' # [ "NECB_Default", "NECB 88% Efficient Condensing Boiler", "Viessmann Vitocrossal 300 CT3-17 96.2% Efficient Condensing Gas Boiler"]
+:furnace_eff: 'NECB_Default' # ["NECB_Default", "NECB 85% Efficient Condensing Gas Furnace"]
+:shw_eff: 'NECB_Default' # [ "NECB_Default", "Natural Gas Power Vent with Electric Ignition", "Natural Gas Direct Vent with Electric Ignition"]
+:ext_wall_cond: 'NECB_Default' # [ 'NECB_Default',  '0.314',  '0.278',  '0.247',  '0.210',  '0.183']
+:ext_floor_cond: 'NECB_Default' # [ 'NECB_Default',   '0.227',   '0.183',   '0.162',   '0.142']
+:ext_roof_cond: 'NECB_Default' # [ 'NECB_Default',  '0.227',  '0.193',  '0.183',  '0.162',  '0.142',  '0.138',  '0.121']
+:ground_wall_cond: 'NECB_Default' # [ 'NECB_Default',     '0.568',     '0.379',     '0.284',     '0.210']
+:ground_floor_cond: 'NECB_Default' #  [ 'NECB_Default',      '0.758',      '0.379']
+:ground_roof_cond: 'NECB_Default' #  [ 'NECB_Default','0.568','0.379','0.284','0.210' ]
+:door_construction_cond: 'NECB_Default' # [ 'NECB_Default','2.4','2.2','1.6']
+:fixed_window_cond: 'NECB_Default' # [ 'NECB_Default','2.4','2.2','1.6']
+:glass_door_cond: 'NECB_Default' # [ 'NECB_Default','2.4','2.2','1.6']
+:overhead_door_cond: 'NECB_Default' # [ 'NECB_Default','2.4','2.2','1.6']
+:skylight_cond: 'NECB_Default' # [ 'NECB_Default',  '2.4',  '2.2',  '1.6']
+:glass_door_solar_trans: 'NECB_Default' # [ 'NECB_Default','0.05','0.95']
+:fixed_wind_solar_trans: 'NECB_Default' # [ 'NECB_Default',           '0.2',           '0.3',           '0.4',           '0.5',           '0.6']
+:skylight_solar_trans: 'NECB_Default' #  [ 'NECB_Default',         '0.05',         '0.50',         '0.95']
+:fdwr_set: 'NECB_Default' # [ 'NECB_Default','0.2','0.3','0.4','0.5','0.6','0.7','0.8','0.9']
+:srr_set: 'NECB_Default' #  [ 'NECB_Default','0.03','0.05']
+:rotation_degrees: 'NECB_Default' #  [ 'NECB_Default',     '45.0',     '90.0']
+:scale_x:  '1.0'
+:scale_y:  '1.0'
+:scale_z:  '1.0'
+:pv_ground_type: 'NECB_Default' # [ 'NECB_Default', 'add_pv_ground' ]
+:pv_ground_total_area_pv_panels_m2: 'NECB_Default' # [ 'NECB_Default' ]
+:pv_ground_tilt_angle: 'NECB_Default' # [ 'NECB_Default' ]
+:pv_ground_azimuth_angle: 'NECB_Default' # [ 'NECB_Default' ]
+:pv_ground_module_description: 'NECB_Default' # [ 'NECB_Default' ]
+:adv_dx_units: 'NECB_Default' # [ 'NECB_Default', 'Carrier WeatherExpert' ]
+:nv_type: 'NECB_Default' # [ 'NECB_Default','add_nv']
+:nv_opening_fraction: 'NECB_Default' # [ 'NECB_Default' ]
+:nv_temp_out_min: 'NECB_Default' # [ 'NECB_Default' ]
+:nv_delta_temp_in_out: 'NECB_Default' # [ 'NECB_Default' ]
+:occupancy_loads_scale: 'NECB_Default' # [ 'NECB_Default' ]
+:electrical_loads_scale: 'NECB_Default' # [ 'NECB_Default' ]
+:oa_scale: 'NECB_Default' # [ 'NECB_Default' ]
+:infiltration_scale: 'NECB_Default' # [ 'NECB_Default' ]
+:chiller_type: 'NECB_Default' # ['NECB_Default','VSD']
