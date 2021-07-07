@@ -21,6 +21,31 @@ ENV RUBYLIB=/usr/local/openstudio-${OPENSTUDIO_VERSION}/Ruby:/usr/Ruby
 USER  root
 WORKDIR /
 
+## The following are security update required by StatsCan.
+
+#Remove openstudio-extensions from /usr/local/openstudio-${OPENSTUDIO_VERSION}/Ruby
+WORKDIR /usr/local/openstudio-${OPENSTUDIO_VERSION}/Ruby
+RUN sed -i '/^.*openstudio-extension.*$/d' Gemfile \
+&& sed -i '/^.*openstudio-extension.*$/d' openstudio-gems.gemspec \
+&& bundle install \
+&& bundle update simplecov-html \
+&& bundle clean --force
+
+#Remove openstudio-extensions from var/oscli
+WORKDIR /var/oscli
+RUN sed -i '/^.*openstudio-extension.*$/d' Gemfile \
+&& sed -i '/^.*openstudio-extension.*$/d' openstudio-gems.gemspec \
+&& bundle install \
+&& bundle update simplecov-html \
+&& bundle clean --force
+
+#Apply security updates
+RUN apt-get update \
+&& apt-get upgrade -y --no-install-recommends --force-yes \
+&& rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
+&& apt-get clean
+
+
 RUN if [ -z "$BTAP_COSTING_BRANCH" ] ; then \
         echo "Creating Public CLI witout costing"; \
         git clone https://$GIT_API_TOKEN:x-oauth-basic@github.com/NREL/openstudio-standards.git --depth 1 --branch ${OS_STANDARDS_BRANCH} --single-branch /btap_costing ; \
