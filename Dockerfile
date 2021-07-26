@@ -58,7 +58,7 @@ RUN if [ -z "$BTAP_COSTING_BRANCH" ] ; then \
         git clone https://$GIT_API_TOKEN:x-oauth-basic@github.com/canmet-energy/btap_costing.git --depth 1 --branch ${BTAP_COSTING_BRANCH} --single-branch /btap_costing; \
         cd /btap_costing; \
         sed -i '/^.*standards.*$/d' Gemfile; \
-        echo -e "\ngem 'openstudio-standards', :github => 'NREL/openstudio-standards', :branch => '${OS_STANDARDS_BRANCH}'\n" | tee -a Gemfile; \
+        echo "gem 'openstudio-standards', :github => 'NREL/openstudio-standards', :branch => '${OS_STANDARDS_BRANCH}'" | tee -a Gemfile; \
         bundle install; \
         echo 'btap_costing revision'; \
         git rev-parse --short HEAD; \
