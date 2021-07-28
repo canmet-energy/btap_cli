@@ -1,6 +1,6 @@
 # Run Configuration
 :datapoint_id: 11111111-1111-1111-1111-111111111111
-:enable_costing: true
+:enable_costing: false
 :run_annual_simulation: true
 :building_type: 'custom' # ["SecondarySchool","PrimarySchool","SmallOffice","MediumOffice","LargeOffice","SmallHotel","LargeHotel","Warehouse","RetailStandalone","RetailStripmall","QuickServiceRestaurant","FullServiceRestaurant","MidriseApartment","HighriseApartment","LowriseApartment","Hospital","Outpatient"]
 :template: 'NECB2017' # [ "BTAPPRE1980", "BTAP1980TO2010", "NECB2011", "NECB2015","NECB2017"]
