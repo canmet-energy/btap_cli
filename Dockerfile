@@ -1,4 +1,4 @@
-ARG OPENSTUDIO_VERSION='3.0.1'
+ARG OPENSTUDIO_VERSION='3.2.0'
 FROM canmet/docker-openstudio:$OPENSTUDIO_VERSION
 # Need to remind Docker of the Openstudio version..https://docs.docker.com/engine/reference/builder/
 ARG OPENSTUDIO_VERSION
@@ -20,30 +20,6 @@ ENV RUBYLIB=/usr/local/openstudio-${OPENSTUDIO_VERSION}/Ruby:/usr/Ruby
 #Be root and install btap_costing under the root folder.
 USER  root
 WORKDIR /
-
-## The following are security update required by StatsCan.
-
-#Remove openstudio-extensions from /usr/local/openstudio-${OPENSTUDIO_VERSION}/Ruby
-WORKDIR /usr/local/openstudio-${OPENSTUDIO_VERSION}/Ruby
-RUN sed -i '/^.*openstudio-extension.*$/d' Gemfile \
-&& sed -i '/^.*openstudio-extension.*$/d' openstudio-gems.gemspec \
-&& bundle install \
-&& bundle update simplecov-html \
-&& bundle clean --force
-
-#Remove openstudio-extensions from var/oscli
-WORKDIR /var/oscli
-RUN sed -i '/^.*openstudio-extension.*$/d' Gemfile \
-&& sed -i '/^.*openstudio-extension.*$/d' openstudio-gems.gemspec \
-&& bundle install \
-&& bundle update simplecov-html \
-&& bundle clean --force
-
-#Apply security updates
-RUN apt-get update \
-&& apt-get upgrade -y --no-install-recommends --force-yes \
-&& rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
-&& apt-get clean
 
 
 RUN if [ -z "$BTAP_COSTING_BRANCH" ] ; then \
