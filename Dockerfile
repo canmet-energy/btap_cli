@@ -1,4 +1,4 @@
-ARG OPENSTUDIO_VERSION='3.2.0'
+ARG OPENSTUDIO_VERSION='3.2.1'
 FROM canmet/docker-openstudio:$OPENSTUDIO_VERSION
 # Need to remind Docker of the Openstudio version..https://docs.docker.com/engine/reference/builder/
 ARG OPENSTUDIO_VERSION
@@ -21,7 +21,7 @@ ENV RUBYLIB=/usr/local/openstudio-${OPENSTUDIO_VERSION}/Ruby:/usr/Ruby
 USER  root
 #Remove openstudio-extensions  due to security issues with 3.0.1
 WORKDIR /usr/local/openstudio-${OPENSTUDIO_VERSION}/Ruby
-RUN if [ -z "$OPENSTUDIO_VERSION" == "3.0.1" ] ; then \
+RUN if [ -z "$OPENSTUDIO_VERSION" == "3.2.1" ] ; then \
         sed -i '/^.*openstudio-extension.*$/d' Gemfile; \
         sed -i '/^.*openstudio-extension.*$/d' openstudio-gems.gemspec; \
         bundle install; \
@@ -29,7 +29,7 @@ RUN if [ -z "$OPENSTUDIO_VERSION" == "3.0.1" ] ; then \
         bundle clean --force; \
      fi
 WORKDIR /var/oscli
-RUN if [ -z "$OPENSTUDIO_VERSION" == "3.0.1" ] ; then \
+RUN if [ -z "$OPENSTUDIO_VERSION" == "3.2.1" ] ; then \
         sed -i '/^.*openstudio-extension.*$/d' Gemfile \
         sed -i '/^.*openstudio-extension.*$/d' openstudio-gems.gemspec \
         bundle install \
